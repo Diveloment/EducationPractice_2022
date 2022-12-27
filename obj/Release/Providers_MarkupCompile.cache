@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Admin\source\repos\Providers\obj\Debug\
+C:\Users\Admin\source\repos\Providers\obj\Release\
 Providers
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Admin\source\repos\Providers\App.xaml
 61112638386
 2-1467109945
