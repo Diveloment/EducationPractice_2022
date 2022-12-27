@@ -37,7 +37,7 @@
             </StackPanel>
         </Grid>
         <Grid Background="#003459">
-            <TextBlock Text="CRM" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas"/>
+            <TextBlock Text="SRM" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas"/>
         </Grid>
         <Grid Grid.Column="1" Background="#007EA7">
             <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
