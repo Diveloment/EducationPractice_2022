@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a442f42de1fc4fdd96a9df2f6c104608" Name="Diagram1">
+        <EntityTypeShape EntityType="ProvidersDataModel.UserRoles" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Users" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Users_UserRoles" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Deals" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="ProvidersDataModel.DealStatuses" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="ProvidersDataModel.DealTypes" Width="1.5" PointX="3" PointY="20.375" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Manufacturers" Width="1.5" PointX="0.75" PointY="11.625" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Offices" Width="1.5" PointX="0.75" PointY="6.25" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Persons" Width="1.5" PointX="3" PointY="16.875" />
+        <EntityTypeShape EntityType="ProvidersDataModel.PersonStatuses" Width="1.5" PointX="0.75" PointY="17.375" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Products" Width="1.5" PointX="3" PointY="11.125" />
+        <EntityTypeShape EntityType="ProvidersDataModel.ProviderRelationship" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="ProvidersDataModel.Providers" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="ProvidersDataModel.sysdiagrams" Width="1.5" PointX="5.625" PointY="5.625" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_DealStatuses" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_DealTypes" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_Persons" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_Products" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_Providers" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Deals_Users" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Products_Manufacturers" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Providers_Offices" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Persons_PersonStatuses" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Providers_ProviderRelationship" />
+        <AssociationConnector Association="ProvidersDataModel.FK_Persons_Providers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

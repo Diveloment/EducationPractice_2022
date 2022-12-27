@@ -1,0 +1,48 @@
+﻿<Window x:Class="Providers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Providers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1200" MinWidth="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" MaxWidth="200" MinWidth="175"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55*" MaxHeight="55" MinHeight="35"></RowDefinition>
+            <RowDefinition Height="379*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <StackPanel Grid.Row="1" Background="#003459" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-clipboard-9151804.png"></Image>
+                    <Button x:Name="providersViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Поставщики" Foreground="White" FontSize="14" Click="providersViewBtn_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-team-9151653.png"></Image>
+                    <Button x:Name="personViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Персоны" Foreground="White" FontSize="14" Click="personViewBtn_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-tasks-9151641.png"></Image>
+                    <Button x:Name="productViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Товары" Foreground="White" FontSize="14" Click="productViewBtn_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-edit-9151638.png"></Image>
+                    <Button x:Name="dealsViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Сделки" Foreground="White" FontSize="14" Click="dealsViewBtn_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        <Grid Background="#003459">
+            <TextBlock Text="CRM" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas"/>
+        </Grid>
+        <Grid Grid.Column="1" Background="#007EA7">
+            <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
+        </Grid>
+        <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden">
+        </Frame>
+    </Grid>
+</Window>

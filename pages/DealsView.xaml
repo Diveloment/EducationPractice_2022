@@ -1,0 +1,87 @@
+﻿<Page x:Class="Providers.pages.DealsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Providers.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1500"
+      Title="DealsView">
+
+    <Grid Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*" MinHeight="35" MaxHeight="35"></RowDefinition>
+                <RowDefinition Height="27*" MinHeight="35" MaxHeight="35"></RowDefinition>
+                <RowDefinition Height="386*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Background="White">
+                <ComboBox x:Name="filterSelect" Margin="5, 5, 5, 5" Width="175" SelectionChanged="filter1Changed" DisplayMemberPath="DealStatus_name"></ComboBox>
+                <Label Content="Поиск:" Margin="5, 5, 0, 5"></Label>
+                <TextBox x:Name="searchBar" Width="175" Margin="0, 5, 5, 5" TextChanged="searchBarInput"></TextBox>
+                <ComboBox x:Name="orderSelect" Margin="5, 5, 5, 5" Width="175" SelectionChanged="orderChanged"></ComboBox>
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="55"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="175"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="175"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="ИД" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="1" Text="СТАТУС" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="2" Text="НАЗВАНИЕ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="3" Text="ДАТА НАЧАЛА" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="4" Text="ПОСТАВЩИК" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="5" Text="КОНТАКТ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="6" Text="ДОП СТОИМОСТЬ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="7" Text="ТИП" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="8" Text="ОТВЕТСТВЕННЫЙ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="9" Text="ПРОДУКТ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="10" Text="КОЛ-ВО" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </Grid>
+            <ListView x:Name="listView" Grid.Row="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="55"></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="175"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition Width="175"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="55"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Deal_id}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="1" Text="{Binding DealStatuses.DealStatus_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="2" Text="{Binding Deal_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="3" Text="{Binding Deal_date}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="4" Text="{Binding Providers.Provider_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="5" Text="{Binding Persons.Person_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="6" Text="{Binding Deal_cost}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="7" Text="{Binding DealTypes.DealType_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="8" Text="{Binding Users.User_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="9" Text="{Binding Products.Product_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Width="25" Grid.Column="10" Text="{Binding Deal_col}" HorizontalAlignment="Right" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" FontWeight="Bold" FontSize="16" Margin="100,0,0,0"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</Page>
