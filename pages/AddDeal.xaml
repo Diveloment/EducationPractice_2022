@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Providers.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddDeal">
+      Title="Новая сделка">
 
     <Grid>
         <Grid Margin="15,15,15,15" Background="Transparent">
