@@ -29,37 +29,54 @@
                     <ColumnDefinition Width="150"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="ИД" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="1" Text="НАИМЕНОВАНИЕ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="2" Text="ОФИС" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="3" Text="ПСЕВДОНИМ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="4" Text="EMAIL" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <TextBlock Grid.Column="5" Text="ОТНОШЕНИЯ" FontFamily="Arial Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-            </Grid>
+                </Grid>
             <ListView x:Name="listView" Grid.Row="2">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="200"></ColumnDefinition>
-                                <ColumnDefinition Width="100"></ColumnDefinition>
-                                <ColumnDefinition Width="250"></ColumnDefinition>
-                                <ColumnDefinition Width="150"></ColumnDefinition>
-                                <ColumnDefinition Width="100"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="55"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Column="0" Text="{Binding Provider_id}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <TextBlock Grid.Column="1" Text="{Binding Provider_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
-                            <TextBlock Grid.Column="2" Text="{Binding Offices.Office_addres}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
-                            <TextBlock Grid.Column="3" Text="{Binding Provider_subname}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
-                            <TextBlock Grid.Column="4" Text="{Binding Provider_email}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <TextBlock Grid.Column="5" Text="{Binding ProviderRelationship.ProviderRelationship_name}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ИД">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Provider_id}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="НАИМЕНОВАНИЕ">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Provider_name}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="ОФИС">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Offices.Office_addres}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="ПСЕВДОНИМ">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Provider_subname}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="E-MAIL">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Provider_email}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="ОТНОШЕНИЯ">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ProviderRelationship.ProviderRelationship_name}" Padding="0 0 10 0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
             </ListView>
         </Grid>
     </Grid>
