@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Providers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1200" MinWidth="1400" MinHeight="700">
+        Title="Контроль поставок" Height="600" MinHeight="600" Width="1200" MinWidth="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*" MaxWidth="200" MinWidth="175"></ColumnDefinition>
-            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto" MaxWidth="200" MinWidth="175"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="55*" MaxHeight="55" MinHeight="35"></RowDefinition>
-            <RowDefinition Height="379*"></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
-            <StackPanel Grid.Row="1" Background="#003459" Orientation="Vertical">
+            <StackPanel Grid.Row="1" Background="{StaticResource ColorSidebar}" Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-clipboard-9151804.png"></Image>
                     <Button x:Name="providersViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Поставщики" Foreground="White" FontSize="14" Click="providersViewBtn_Click"/>
@@ -33,14 +34,13 @@
                     <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-edit-9151638.png"></Image>
                     <Button x:Name="dealsViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Сделки" Foreground="White" FontSize="14" Click="dealsViewBtn_Click"/>
                 </StackPanel>
-
             </StackPanel>
         </Grid>
-        <Grid Background="#003459">
-            <TextBlock Text="CRM" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas"/>
+        <Grid Background="{StaticResource ColorSidebar}">
+            <TextBlock Text="SRM" Foreground="White" Style="{StaticResource Header}"/>
         </Grid>
-        <Grid Grid.Column="1" Background="#007EA7">
-            <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
+        <Grid Grid.Column="1" Background="{StaticResource ColorHeader}">
+            <TextBlock Foreground="White" Style="{StaticResource Header}" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
         </Grid>
         <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Disabled">
         </Frame>

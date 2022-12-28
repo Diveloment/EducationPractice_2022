@@ -21,8 +21,6 @@ namespace Providers.pages
     /// </summary>
     public partial class PersonsView : Page
     {
-        private float fltStart = 0f;
-        private float fltEnd = 100f;
         private float fltStatus = 1;
         private string searchStr = "";
         private ListSortDirection sortDirection = ListSortDirection.Ascending;

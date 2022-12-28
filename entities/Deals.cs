@@ -14,12 +14,6 @@ namespace Providers.entities
     
     public partial class Deals
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Deals()
-        {
-            this.Deal_cost = 0F;
-        }
-    
         public int Deal_id { get; set; }
         public int Deal_status { get; set; }
         public string Deal_name { get; set; }

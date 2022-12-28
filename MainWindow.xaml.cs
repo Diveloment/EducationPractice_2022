@@ -23,7 +23,7 @@ namespace Providers
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.Navigate(new pages.Products());
+            mainFrame.Navigate(new pages.ProvidersViewPage());
         }
 
         private void productViewBtn_Click(object sender, RoutedEventArgs e)

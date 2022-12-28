@@ -25,8 +25,6 @@ namespace Providers.entities
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserRoles> UserRoles { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Deals> Deals { get; set; }
         public virtual DbSet<DealStatuses> DealStatuses { get; set; }
         public virtual DbSet<DealTypes> DealTypes { get; set; }
@@ -38,5 +36,7 @@ namespace Providers.entities
         public virtual DbSet<ProviderRelationship> ProviderRelationship { get; set; }
         public virtual DbSet<Providers> Providers { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<UserRoles> UserRoles { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

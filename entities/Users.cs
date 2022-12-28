@@ -26,8 +26,8 @@ namespace Providers.entities
         public string User_password { get; set; }
         public Nullable<int> User_role { get; set; }
     
-        public virtual UserRoles UserRoles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deals> Deals { get; set; }
+        public virtual UserRoles UserRoles { get; set; }
     }
 }

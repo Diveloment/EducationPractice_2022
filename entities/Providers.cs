@@ -25,14 +25,14 @@ namespace Providers.entities
         public string Provider_name { get; set; }
         public Nullable<int> Provider_office { get; set; }
         public string Provider_subname { get; set; }
-        public int Provider_relationshipType { get; set; }
         public string Provider_email { get; set; }
+        public int Provider_relationshipType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deals> Deals { get; set; }
         public virtual Offices Offices { get; set; }
-        public virtual ProviderRelationship ProviderRelationship { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Persons> Persons { get; set; }
+        public virtual ProviderRelationship ProviderRelationship { get; set; }
     }
 }
