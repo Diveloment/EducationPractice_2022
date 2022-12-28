@@ -20,6 +20,7 @@
                 <Label Content="Поиск:" Margin="5, 5, 0, 5"></Label>
                 <TextBox x:Name="searchBar" Width="175" Margin="0, 5, 5, 5" TextChanged="searchBarInput"></TextBox>
                 <ComboBox x:Name="orderSelect" Margin="5, 5, 5, 5" Width="175" SelectionChanged="orderChanged"></ComboBox>
+                <ComboBox x:Name="filterTypeSelect" Margin="5, 5, 5, 5" Width="175" SelectionChanged="filter2Changed" DisplayMemberPath="DealType_name" ScrollViewer.VerticalScrollBarVisibility="Visible"></ComboBox>
             </StackPanel>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>

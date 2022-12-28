@@ -21,15 +21,13 @@ namespace Providers.pages
     /// </summary>
     public partial class DealsView : Page
     {
-        private float fltStart = 0f;
-        private float fltEnd = 100f;
-        private float fltStatus = 1;
+        private int fltStatus = 1;
+        private int fltTypeStatus = 1;
         private string searchStr = "";
         private ListSortDirection sortDirection = ListSortDirection.Ascending;
         public DealsView()
         {
             InitializeComponent();
-            filterSelect.Items.Add("Все диапазоны");
             var statuses = App.Context.DealStatuses.ToList();
             for (int i = 0; i < statuses.Count(); i++)
             {
@@ -39,6 +37,9 @@ namespace Providers.pages
 
             orderSelect.ItemsSource = new List<string>() { "По дате", "По дате обратно" };
             orderSelect.SelectedIndex = 0;
+
+            filterTypeSelect.ItemsSource = App.Context.DealTypes.ToList();
+            filterTypeSelect.SelectedIndex = 0;
         }
 
         private void updateListView(object sender, RoutedEventArgs e)
@@ -48,7 +49,7 @@ namespace Providers.pages
 
         private void filter1Changed(object sender, SelectionChangedEventArgs e)
         {
-            fltStatus = filterSelect.SelectedIndex;
+            fltStatus = (filterSelect.SelectedItem as entities.DealStatuses).DealStatus_id;
             UpdateList();
         }
 
@@ -80,12 +81,18 @@ namespace Providers.pages
         public void UpdateList()
         {
             var view = CollectionViewSource.GetDefaultView(App.Context.Deals.ToList());
-            view.Filter = i => (((entities.Deals)i).Deal_status == fltStatus || fltStatus == 0) && ((entities.Deals)i).Deal_name.ToLower().Contains(searchStr.ToLower());
+            view.Filter = i => (((entities.Deals)i).Deal_status == fltStatus || fltStatus == 0) && (((entities.Deals)i).Deal_type == fltTypeStatus || fltTypeStatus == 0) && ((entities.Deals)i).Deal_name.ToLower().Contains(searchStr.ToLower());
             listView.ItemsSource = view;
             SortDescription sd = new SortDescription("Deal_date", sortDirection);
             listView.Items.SortDescriptions.Clear();
             listView.Items.SortDescriptions.Add(sd);
             listView.Items.Refresh();
+        }
+
+        private void filter2Changed(object sender, SelectionChangedEventArgs e)
+        {
+            fltTypeStatus = (filterTypeSelect.SelectedItem as entities.DealTypes).DealType_id;
+            UpdateList();
         }
     }
 }

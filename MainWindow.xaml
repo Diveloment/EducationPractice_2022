@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Providers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1200" MinWidth="1200">
+        Title="MainWindow" Height="450" Width="1200" MinWidth="1400" MinHeight="700">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*" MaxWidth="200" MinWidth="175"></ColumnDefinition>
@@ -42,7 +42,7 @@
         <Grid Grid.Column="1" Background="#007EA7">
             <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
         </Grid>
-        <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden">
+        <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Disabled">
         </Frame>
     </Grid>
 </Window>

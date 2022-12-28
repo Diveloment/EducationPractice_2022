@@ -61,7 +61,7 @@
                             <TextBlock Grid.Column="3" Text="{Binding Person_lastName}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
                             <TextBlock Grid.Column="4" Text="{Binding Person_phone}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                             <TextBlock Grid.Column="5" Text="{Binding Person_email}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <TextBlock Grid.Column="6" Text="{Binding PersonStatuses.PersonStatus_name}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Grid.Column="6" Text="{Binding PersonStatuses.PersonStatus_name}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,0"></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
