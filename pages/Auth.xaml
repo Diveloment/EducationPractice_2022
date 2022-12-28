@@ -8,16 +8,31 @@
       Title="Вход в систему">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="220, 100" Background="Transparent">
-            <Label Content="Логин:" Margin="15,0"></Label>
-            <TextBox x:Name="loginField" Height="25" Margin="15,0"></TextBox>
-            <Label Content="Пароль:" Margin="15,0"></Label>
-            <PasswordBox x:Name="passwordField" Height="25" Margin="15,0"></PasswordBox>
-            <Button Width="Auto" Height="25" Content="Войти"
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Логин:" Margin="5,0" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"/>
+                <TextBox x:Name="loginField" Height="25" Margin="5,3,0,3" Grid.Row="0" Grid.Column="1" Width="100"/>
+                <Label Content="Пароль:" Margin="5,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
+                <PasswordBox x:Name="passwordField" Height="25" Margin="5,3,0,0" Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Left"/>
+            </Grid>
+            <Button Width="Auto" Height="25" Content="Войти" Grid.Row="1"
                     HorizontalAlignment="Center"
                     Padding="25,0"
-                    Margin="0,15,0,0"
+                    Margin="0,5,0,0"
                     Click="auth_Button"></Button>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Page>

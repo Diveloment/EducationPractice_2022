@@ -10,6 +10,9 @@
         <Style TargetType="{x:Type FrameworkElement}" x:Key="BaseStyle">
         </Style>
 
+        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}">
+        </Style>
+
         <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}"
                x:Key="Header">
             <Setter Property="FontSize" Value="24"/>
@@ -17,6 +20,7 @@
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
+
 
         <Style TargetType="ListView" BasedOn="{StaticResource BaseStyle}">
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
