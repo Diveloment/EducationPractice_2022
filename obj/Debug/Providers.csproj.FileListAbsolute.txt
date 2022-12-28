@@ -70,3 +70,4 @@ E:\source\repos\trpo\EducationPractice_2022\obj\Debug\Providers.pdb
 E:\source\repos\trpo\EducationPractice_2022\obj\Debug\App.baml
 >>>>>>> restyle
 C:\Users\Admin\source\repos\Providers\obj\Debug\App.baml
+C:\Users\Admin\source\repos\Providers\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
