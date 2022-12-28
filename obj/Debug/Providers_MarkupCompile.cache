@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Admin\source\repos\Providers\App.xaml
-61112638386
+7565866917
 2-1467109945
-26-1847746821
+27-747472020
 18-1069337153
-MainWindow.xaml;pages\Auth.xaml;pages\DealsView.xaml;pages\PersonsView.xaml;pages\Products.xaml;pages\ProvidersViewPage.xaml;
+MainWindow.xaml;pages\AddDeal.xaml;pages\Auth.xaml;pages\DealsView.xaml;pages\PersonsView.xaml;pages\Products.xaml;pages\ProvidersViewPage.xaml;
 
 False
 
