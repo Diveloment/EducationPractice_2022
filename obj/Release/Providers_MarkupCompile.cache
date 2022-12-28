@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Admin\source\repos\Providers\obj\Release\
+E:\source\repos\trpo\EducationPractice_2022\obj\Release\
 Providers
 none
 false
 TRACE
-C:\Users\Admin\source\repos\Providers\App.xaml
-61112638386
-2-1467109945
-26-1847746821
-18-1069337153
+E:\source\repos\trpo\EducationPractice_2022\App.xaml
+61819499001
+21858067137
+26630610650
+18805488449
 MainWindow.xaml;pages\Auth.xaml;pages\DealsView.xaml;pages\PersonsView.xaml;pages\Products.xaml;pages\ProvidersViewPage.xaml;
 
 True

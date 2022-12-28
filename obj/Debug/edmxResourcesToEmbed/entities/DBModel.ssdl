@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище ProvidersDataModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ProvidersDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Deals">
     <Key>
       <PropertyRef Name="Deal_id" />
@@ -86,7 +86,7 @@
     <Key>
       <PropertyRef Name="Provider_id" />
     </Key>
-    <Property Name="Provider_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Provider_id" Type="int" Nullable="false" />
     <Property Name="Provider_name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Provider_office" Type="int" />
     <Property Name="Provider_subname" Type="nvarchar(max)" Nullable="false" />
@@ -286,7 +286,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище ProvidersDataModelContainer">
+  <EntityContainer Name="ProvidersDataModelStoreContainer">
     <EntitySet Name="Deals" EntityType="Self.Deals" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DealStatuses" EntityType="Self.DealStatuses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DealTypes" EntityType="Self.DealTypes" Schema="dbo" store:Type="Tables" />
