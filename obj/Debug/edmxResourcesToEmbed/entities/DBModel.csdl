@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ProvidersDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Deal">
+  <EntityType Name="Deals">
     <Key>
       <PropertyRef Name="Deal_id" />
     </Key>
@@ -15,14 +15,14 @@
     <Property Name="Deal_supervisor" Type="Int32" />
     <Property Name="Deal_product" Type="Int32" />
     <Property Name="Deal_col" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="DealStatus" Relationship="Self.FK_Deals_DealStatuses" FromRole="Deals" ToRole="DealStatuses" />
-    <NavigationProperty Name="DealType" Relationship="Self.FK_Deals_DealTypes" FromRole="Deals" ToRole="DealTypes" />
-    <NavigationProperty Name="Person" Relationship="Self.FK_Deals_Persons" FromRole="Deals" ToRole="Persons" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Deals_Products" FromRole="Deals" ToRole="Products" />
-    <NavigationProperty Name="Provider" Relationship="Self.FK_Deals_Providers" FromRole="Deals" ToRole="Providers" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Deals_Users" FromRole="Deals" ToRole="Users" />
+    <NavigationProperty Name="DealStatuses" Relationship="Self.FK_Deals_DealStatuses" FromRole="Deals" ToRole="DealStatuses" />
+    <NavigationProperty Name="DealTypes" Relationship="Self.FK_Deals_DealTypes" FromRole="Deals" ToRole="DealTypes" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Deals_Persons" FromRole="Deals" ToRole="Persons" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Deals_Products" FromRole="Deals" ToRole="Products" />
+    <NavigationProperty Name="Providers" Relationship="Self.FK_Deals_Providers" FromRole="Deals" ToRole="Providers" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Deals_Users" FromRole="Deals" ToRole="Users" />
   </EntityType>
-  <EntityType Name="DealStatus">
+  <EntityType Name="DealStatuses">
     <Key>
       <PropertyRef Name="DealStatus_id" />
     </Key>
@@ -30,7 +30,7 @@
     <Property Name="DealStatus_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_DealStatuses" FromRole="DealStatuses" ToRole="Deals" />
   </EntityType>
-  <EntityType Name="DealType">
+  <EntityType Name="DealTypes">
     <Key>
       <PropertyRef Name="DealType_id" />
     </Key>
@@ -38,7 +38,7 @@
     <Property Name="DealType_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_DealTypes" FromRole="DealTypes" ToRole="Deals" />
   </EntityType>
-  <EntityType Name="Manufacturer">
+  <EntityType Name="Manufacturers">
     <Key>
       <PropertyRef Name="Manufacturer_id" />
     </Key>
@@ -46,7 +46,7 @@
     <Property Name="Manufacturer_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Products_Manufacturers" FromRole="Manufacturers" ToRole="Products" />
   </EntityType>
-  <EntityType Name="Office">
+  <EntityType Name="Offices">
     <Key>
       <PropertyRef Name="Office_id" />
     </Key>
@@ -55,7 +55,7 @@
     <Property Name="Office_addres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Providers" Relationship="Self.FK_Providers_Offices" FromRole="Offices" ToRole="Providers" />
   </EntityType>
-  <EntityType Name="Person">
+  <EntityType Name="Persons">
     <Key>
       <PropertyRef Name="Person_id" />
     </Key>
@@ -67,10 +67,10 @@
     <Property Name="Person_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Person_status" Type="Int32" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_Persons" FromRole="Persons" ToRole="Deals" />
-    <NavigationProperty Name="PersonStatus" Relationship="Self.FK_Persons_PersonStatuses" FromRole="Persons" ToRole="PersonStatuses" />
-    <NavigationProperty Name="Provider" Relationship="Self.FK_Persons_Providers" FromRole="Persons" ToRole="Providers" />
+    <NavigationProperty Name="PersonStatuses" Relationship="Self.FK_Persons_PersonStatuses" FromRole="Persons" ToRole="PersonStatuses" />
+    <NavigationProperty Name="Providers" Relationship="Self.FK_Persons_Providers" FromRole="Persons" ToRole="Providers" />
   </EntityType>
-  <EntityType Name="PersonStatus">
+  <EntityType Name="PersonStatuses">
     <Key>
       <PropertyRef Name="PersonStatus_id" />
     </Key>
@@ -78,7 +78,7 @@
     <Property Name="PersonStatus_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Persons" Relationship="Self.FK_Persons_PersonStatuses" FromRole="PersonStatuses" ToRole="Persons" />
   </EntityType>
-  <EntityType Name="Product">
+  <EntityType Name="Products">
     <Key>
       <PropertyRef Name="Product_article" />
     </Key>
@@ -89,7 +89,7 @@
     <Property Name="Product_manufacturer" Type="Int32" Nullable="false" />
     <Property Name="Product_stock" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_Products" FromRole="Products" ToRole="Deals" />
-    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_Products_Manufacturers" FromRole="Products" ToRole="Manufacturers" />
+    <NavigationProperty Name="Manufacturers" Relationship="Self.FK_Products_Manufacturers" FromRole="Products" ToRole="Manufacturers" />
   </EntityType>
   <EntityType Name="ProviderRelationship">
     <Key>
@@ -99,7 +99,7 @@
     <Property Name="ProviderRelationship_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Providers" Relationship="Self.FK_Providers_ProviderRelationship" FromRole="ProviderRelationship" ToRole="Providers" />
   </EntityType>
-  <EntityType Name="Provider">
+  <EntityType Name="Providers">
     <Key>
       <PropertyRef Name="Provider_id" />
     </Key>
@@ -110,11 +110,11 @@
     <Property Name="Provider_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Provider_relationshipType" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_Providers" FromRole="Providers" ToRole="Deals" />
-    <NavigationProperty Name="Office" Relationship="Self.FK_Providers_Offices" FromRole="Providers" ToRole="Offices" />
+    <NavigationProperty Name="Offices" Relationship="Self.FK_Providers_Offices" FromRole="Providers" ToRole="Offices" />
     <NavigationProperty Name="Persons" Relationship="Self.FK_Persons_Providers" FromRole="Providers" ToRole="Persons" />
     <NavigationProperty Name="ProviderRelationship" Relationship="Self.FK_Providers_ProviderRelationship" FromRole="Providers" ToRole="ProviderRelationship" />
   </EntityType>
-  <EntityType Name="sysdiagram">
+  <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
@@ -124,7 +124,7 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="UserRole">
+  <EntityType Name="UserRoles">
     <Key>
       <PropertyRef Name="UserRole_id" />
     </Key>
@@ -132,7 +132,7 @@
     <Property Name="UserRole_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserRoles" FromRole="UserRoles" ToRole="Users" />
   </EntityType>
-  <EntityType Name="User">
+  <EntityType Name="Users">
     <Key>
       <PropertyRef Name="User_id" />
     </Key>
@@ -142,13 +142,13 @@
     <Property Name="User_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="User_role" Type="Int32" />
     <NavigationProperty Name="Deals" Relationship="Self.FK_Deals_Users" FromRole="Users" ToRole="Deals" />
-    <NavigationProperty Name="UserRole" Relationship="Self.FK_Users_UserRoles" FromRole="Users" ToRole="UserRoles" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_Users_UserRoles" FromRole="Users" ToRole="UserRoles" />
   </EntityType>
   <Association Name="FK_Deals_DealStatuses">
-    <End Role="DealStatuses" Type="Self.DealStatus" Multiplicity="1">
+    <End Role="DealStatuses" Type="Self.DealStatuses" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DealStatuses">
         <PropertyRef Name="DealStatus_id" />
@@ -159,10 +159,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Deals_DealTypes">
-    <End Role="DealTypes" Type="Self.DealType" Multiplicity="1">
+    <End Role="DealTypes" Type="Self.DealTypes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DealTypes">
         <PropertyRef Name="DealType_id" />
@@ -173,10 +173,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Deals_Persons">
-    <End Role="Persons" Type="Self.Person" Multiplicity="0..1">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persons">
         <PropertyRef Name="Person_id" />
@@ -187,10 +187,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Deals_Products">
-    <End Role="Products" Type="Self.Product" Multiplicity="0..1">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Products">
         <PropertyRef Name="Product_article" />
@@ -201,10 +201,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Deals_Providers">
-    <End Role="Providers" Type="Self.Provider" Multiplicity="1">
+    <End Role="Providers" Type="Self.Providers" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Providers">
         <PropertyRef Name="Provider_id" />
@@ -215,10 +215,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Deals_Users">
-    <End Role="Users" Type="Self.User" Multiplicity="0..1">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Deals" Type="Self.Deal" Multiplicity="*" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Users">
         <PropertyRef Name="User_id" />
@@ -229,10 +229,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Products_Manufacturers">
-    <End Role="Manufacturers" Type="Self.Manufacturer" Multiplicity="1">
+    <End Role="Manufacturers" Type="Self.Manufacturers" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Manufacturers">
         <PropertyRef Name="Manufacturer_id" />
@@ -243,10 +243,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Providers_Offices">
-    <End Role="Offices" Type="Self.Office" Multiplicity="0..1">
+    <End Role="Offices" Type="Self.Offices" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Providers" Type="Self.Provider" Multiplicity="*" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Offices">
         <PropertyRef Name="Office_id" />
@@ -257,10 +257,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persons_PersonStatuses">
-    <End Role="PersonStatuses" Type="Self.PersonStatus" Multiplicity="0..1">
+    <End Role="PersonStatuses" Type="Self.PersonStatuses" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Persons" Type="Self.Person" Multiplicity="*" />
+    <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PersonStatuses">
         <PropertyRef Name="PersonStatus_id" />
@@ -271,8 +271,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persons_Providers">
-    <End Role="Providers" Type="Self.Provider" Multiplicity="1" />
-    <End Role="Persons" Type="Self.Person" Multiplicity="*" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="1" />
+    <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Providers">
         <PropertyRef Name="Provider_id" />
@@ -286,7 +286,7 @@
     <End Role="ProviderRelationship" Type="Self.ProviderRelationship" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Providers" Type="Self.Provider" Multiplicity="*" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ProviderRelationship">
         <PropertyRef Name="ProviderRelationship_id" />
@@ -297,10 +297,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Users_UserRoles">
-    <End Role="UserRoles" Type="Self.UserRole" Multiplicity="0..1">
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserRoles">
         <PropertyRef Name="UserRole_id" />
@@ -311,19 +311,19 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ProvidersDataEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Deals" EntityType="Self.Deal" />
-    <EntitySet Name="DealStatuses" EntityType="Self.DealStatus" />
-    <EntitySet Name="DealTypes" EntityType="Self.DealType" />
-    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturer" />
-    <EntitySet Name="Offices" EntityType="Self.Office" />
-    <EntitySet Name="Persons" EntityType="Self.Person" />
-    <EntitySet Name="PersonStatuses" EntityType="Self.PersonStatus" />
-    <EntitySet Name="Products" EntityType="Self.Product" />
-    <EntitySet Name="ProviderRelationships" EntityType="Self.ProviderRelationship" />
-    <EntitySet Name="Providers" EntityType="Self.Provider" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
-    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Deals" EntityType="Self.Deals" />
+    <EntitySet Name="DealStatuses" EntityType="Self.DealStatuses" />
+    <EntitySet Name="DealTypes" EntityType="Self.DealTypes" />
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" />
+    <EntitySet Name="Offices" EntityType="Self.Offices" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" />
+    <EntitySet Name="PersonStatuses" EntityType="Self.PersonStatuses" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="ProviderRelationship" EntityType="Self.ProviderRelationship" />
+    <EntitySet Name="Providers" EntityType="Self.Providers" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
     <AssociationSet Name="FK_Deals_DealStatuses" Association="Self.FK_Deals_DealStatuses">
       <End Role="DealStatuses" EntitySet="DealStatuses" />
       <End Role="Deals" EntitySet="Deals" />
@@ -365,7 +365,7 @@
       <End Role="Persons" EntitySet="Persons" />
     </AssociationSet>
     <AssociationSet Name="FK_Providers_ProviderRelationship" Association="Self.FK_Providers_ProviderRelationship">
-      <End Role="ProviderRelationship" EntitySet="ProviderRelationships" />
+      <End Role="ProviderRelationship" EntitySet="ProviderRelationship" />
       <End Role="Providers" EntitySet="Providers" />
     </AssociationSet>
     <AssociationSet Name="FK_Users_UserRoles" Association="Self.FK_Users_UserRoles">

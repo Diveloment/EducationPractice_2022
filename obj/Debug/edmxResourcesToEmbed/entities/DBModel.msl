@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ProvidersDataModelStoreContainer" CdmEntityContainer="ProvidersDataEntities">
     <EntitySetMapping Name="Deals">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Deal">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Deals">
         <MappingFragment StoreEntitySet="Deals">
           <ScalarProperty Name="Deal_id" ColumnName="Deal_id" />
           <ScalarProperty Name="Deal_status" ColumnName="Deal_status" />
@@ -19,7 +19,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DealStatuses">
-      <EntityTypeMapping TypeName="ProvidersDataModel.DealStatus">
+      <EntityTypeMapping TypeName="ProvidersDataModel.DealStatuses">
         <MappingFragment StoreEntitySet="DealStatuses">
           <ScalarProperty Name="DealStatus_id" ColumnName="DealStatus_id" />
           <ScalarProperty Name="DealStatus_name" ColumnName="DealStatus_name" />
@@ -27,7 +27,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DealTypes">
-      <EntityTypeMapping TypeName="ProvidersDataModel.DealType">
+      <EntityTypeMapping TypeName="ProvidersDataModel.DealTypes">
         <MappingFragment StoreEntitySet="DealTypes">
           <ScalarProperty Name="DealType_id" ColumnName="DealType_id" />
           <ScalarProperty Name="DealType_name" ColumnName="DealType_name" />
@@ -35,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Manufacturers">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Manufacturer">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Manufacturers">
         <MappingFragment StoreEntitySet="Manufacturers">
           <ScalarProperty Name="Manufacturer_id" ColumnName="Manufacturer_id" />
           <ScalarProperty Name="Manufacturer_name" ColumnName="Manufacturer_name" />
@@ -43,7 +43,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Offices">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Office">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Offices">
         <MappingFragment StoreEntitySet="Offices">
           <ScalarProperty Name="Office_id" ColumnName="Office_id" />
           <ScalarProperty Name="Office_name" ColumnName="Office_name" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Persons">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Person">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Persons">
         <MappingFragment StoreEntitySet="Persons">
           <ScalarProperty Name="Person_id" ColumnName="Person_id" />
           <ScalarProperty Name="Person_provider" ColumnName="Person_provider" />
@@ -65,7 +65,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PersonStatuses">
-      <EntityTypeMapping TypeName="ProvidersDataModel.PersonStatus">
+      <EntityTypeMapping TypeName="ProvidersDataModel.PersonStatuses">
         <MappingFragment StoreEntitySet="PersonStatuses">
           <ScalarProperty Name="PersonStatus_id" ColumnName="PersonStatus_id" />
           <ScalarProperty Name="PersonStatus_name" ColumnName="PersonStatus_name" />
@@ -73,7 +73,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Product">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Products">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="Product_article" ColumnName="Product_article" />
           <ScalarProperty Name="Product_name" ColumnName="Product_name" />
@@ -84,7 +84,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProviderRelationships">
+    <EntitySetMapping Name="ProviderRelationship">
       <EntityTypeMapping TypeName="ProvidersDataModel.ProviderRelationship">
         <MappingFragment StoreEntitySet="ProviderRelationship">
           <ScalarProperty Name="ProviderRelationship_id" ColumnName="ProviderRelationship_id" />
@@ -93,7 +93,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Providers">
-      <EntityTypeMapping TypeName="ProvidersDataModel.Provider">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Providers">
         <MappingFragment StoreEntitySet="Providers">
           <ScalarProperty Name="Provider_id" ColumnName="Provider_id" />
           <ScalarProperty Name="Provider_name" ColumnName="Provider_name" />
@@ -105,7 +105,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="ProvidersDataModel.sysdiagram">
+      <EntityTypeMapping TypeName="ProvidersDataModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -116,7 +116,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserRoles">
-      <EntityTypeMapping TypeName="ProvidersDataModel.UserRole">
+      <EntityTypeMapping TypeName="ProvidersDataModel.UserRoles">
         <MappingFragment StoreEntitySet="UserRoles">
           <ScalarProperty Name="UserRole_id" ColumnName="UserRole_id" />
           <ScalarProperty Name="UserRole_name" ColumnName="UserRole_name" />
@@ -124,7 +124,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="ProvidersDataModel.User">
+      <EntityTypeMapping TypeName="ProvidersDataModel.Users">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="User_id" ColumnName="User_id" />
           <ScalarProperty Name="User_name" ColumnName="User_name" />
