@@ -72,3 +72,5 @@ E:\source\repos\trpo\EducationPractice_2022\obj\Debug\App.baml
 C:\Users\Admin\source\repos\Providers\obj\Debug\App.baml
 C:\Users\Admin\source\repos\Providers\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 >>>>>>> 5aa9cc9459b15671663c638cf3ed125fa7a5a92d
+C:\Users\Admin\source\repos\Providers\obj\Debug\pages\StatisticView.g.cs
+C:\Users\Admin\source\repos\Providers\obj\Debug\pages\StatisticView.baml

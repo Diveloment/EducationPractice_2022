@@ -154,6 +154,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\StatisticView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\AddDeal.xaml.cs">
@@ -173,6 +177,9 @@
     </Compile>
     <Compile Include="pages\ProvidersViewPage.xaml.cs">
       <DependentUpon>ProvidersViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\StatisticView.xaml.cs">
+      <DependentUpon>StatisticView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

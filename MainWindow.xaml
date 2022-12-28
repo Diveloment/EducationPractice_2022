@@ -34,6 +34,10 @@
                     <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-edit-9151638.png"></Image>
                     <Button x:Name="dealsViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Сделки" Foreground="White" FontSize="14" Click="dealsViewBtn_Click"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-edit-9151638.png"></Image>
+                    <Button x:Name="statViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Статистика" Foreground="White" FontSize="14" Click="statViewBtn_Click"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
         <Grid Background="{StaticResource ColorSidebar}">

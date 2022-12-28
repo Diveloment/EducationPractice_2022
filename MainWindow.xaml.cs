@@ -45,5 +45,10 @@ namespace Providers
         {
             mainFrame.Navigate(new pages.PersonsView());
         }
+
+        private void statViewBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new pages.StatisticView());
+        }
     }
 }
