@@ -5,12 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Providers"
         mc:Ignorable="d"
-<<<<<<< HEAD
         Title="Контроль поставок" Height="600" MinHeight="600" Width="1200" MinWidth="1200"
         WindowStartupLocation="CenterScreen">
-=======
-        Title="MainWindow" Height="450" Width="1200" MinWidth="1400" MinHeight="700">
->>>>>>> Добавлены фильтры в просмотре сделок
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MaxWidth="200" MinWidth="175"></ColumnDefinition>
