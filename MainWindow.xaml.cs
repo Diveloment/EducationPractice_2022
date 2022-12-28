@@ -23,32 +23,48 @@ namespace Providers
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.Navigate(new pages.ProvidersViewPage());
+            mainFrame.Navigate(new pages.Auth());
         }
 
         private void productViewBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (App.authUser == null)
+                return;
             mainFrame.Navigate(new pages.Products());
         }
 
         private void providersViewBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (App.authUser == null)
+                return;
             mainFrame.Navigate(new pages.ProvidersViewPage());
         }
 
         private void dealsViewBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (App.authUser == null)
+                return;
             mainFrame.Navigate(new pages.DealsView());
         }
 
         private void personViewBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (App.authUser == null)
+                return;
             mainFrame.Navigate(new pages.PersonsView());
         }
 
         private void statViewBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (App.authUser == null)
+                return;
             mainFrame.Navigate(new pages.StatisticView());
+        }
+
+        private void outBtn_Click(object sender, RoutedEventArgs e)
+        {
+            App.authUser = null;
+            mainFrame.Navigate(new pages.Auth());
         }
     }
 }

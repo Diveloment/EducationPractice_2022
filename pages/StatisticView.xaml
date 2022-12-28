@@ -6,27 +6,47 @@
       xmlns:local="clr-namespace:Providers.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StatisticView">
+      Title="Статистика">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="31*"/>
-            <RowDefinition Height="44*"/>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
-        <Rectangle Height="164" Stroke="Black" VerticalAlignment="Center" RadiusX="10" RadiusY="10" Margin="49,0,49,0">
-            <Rectangle.Fill>
+        <StackPanel Orientation="Vertical" Margin="25">
+            <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF7ECC25"/>
-                    <GradientStop Color="#FFA8C388" Offset="1"/>
+                    <GradientStop Color="#FFCDD48F"/>
+                    <GradientStop Color="#FFB9CA1C" Offset="1"/>
                 </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <TextBlock Text="Завершенные сделки:" Margin="61,23,59,134" FontWeight="Bold" FontSize="18" />
+            </StackPanel.Background>
+            <TextBlock Text="Завершенные сделки:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="dealsTotalComp" Text="10" Margin="15,5,5,5" FontSize="24"/>
+            <TextBlock Text="На сумму:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="sumDealsComp" Text="10000 руб" Margin="15,5,5,5" FontSize="24"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="25" Grid.Column="1">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8FB0D4"/>
+                    <GradientStop Color="#FF1C66CA" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <TextBlock Text="Активные сделки:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="dealsTotal" Text="10" Margin="15,5,5,5" FontSize="24"/>
+            <TextBlock Text="На сумму:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="sumDeals" Text="10000 руб" Margin="15,5,5,5" FontSize="24"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="15" Grid.Row="1">
+            <TextBlock Text="Общее кол-во заказов оборудования:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="prodTotal" Text="10" Margin="15,5,5,5" FontSize="20"/>
+            <TextBlock Text="Персонал:" Margin="5" FontSize="18" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="adminsText" Text="админы:" Margin="5" FontSize="18" FontWeight="Medium"></TextBlock>
+            <TextBlock x:Name="employeeText" Text="сотрудники:" Margin="5" FontSize="18" FontWeight="Medium"></TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

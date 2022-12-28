@@ -14,13 +14,19 @@ namespace Providers.entities
     
     public partial class Deals
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Deals()
+        {
+            this.Deal_cost = 0F;
+        }
+    
         public int Deal_id { get; set; }
         public int Deal_status { get; set; }
         public string Deal_name { get; set; }
         public System.DateTime Deal_date { get; set; }
         public int Deal_provider { get; set; }
         public Nullable<int> Deal_contactPerson { get; set; }
-        public Nullable<float> Deal_cost { get; set; }
+        public float Deal_cost { get; set; }
         public int Deal_type { get; set; }
         public Nullable<int> Deal_supervisor { get; set; }
         public Nullable<int> Deal_product { get; set; }

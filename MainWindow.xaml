@@ -45,6 +45,7 @@
         </Grid>
         <Grid Grid.Column="1" Background="{StaticResource ColorHeader}">
             <TextBlock Foreground="White" Style="{StaticResource Header}" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
+            <Button x:Name="outBtn" Content="Выйти" Width="175" Margin="7" HorizontalAlignment="Right" Click="outBtn_Click"></Button>
         </Grid>
         <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Disabled">
         </Frame>

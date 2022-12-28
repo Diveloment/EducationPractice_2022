@@ -15,7 +15,7 @@
           <Property Name="Deal_date" Type="datetime" Nullable="false" />
           <Property Name="Deal_provider" Type="int" Nullable="false" />
           <Property Name="Deal_contactPerson" Type="int" />
-          <Property Name="Deal_cost" Type="real" />
+          <Property Name="Deal_cost" Type="real" Nullable="false" />
           <Property Name="Deal_type" Type="int" Nullable="false" />
           <Property Name="Deal_supervisor" Type="int" />
           <Property Name="Deal_product" Type="int" />
@@ -368,7 +368,7 @@
           <Property Name="Deal_date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Deal_provider" Type="Int32" Nullable="false" />
           <Property Name="Deal_contactPerson" Type="Int32" />
-          <Property Name="Deal_cost" Type="Single" />
+          <Property Name="Deal_cost" Type="Single" DefaultValue="0" Nullable="false" />
           <Property Name="Deal_type" Type="Int32" Nullable="false" />
           <Property Name="Deal_supervisor" Type="Int32" />
           <Property Name="Deal_product" Type="Int32" />
