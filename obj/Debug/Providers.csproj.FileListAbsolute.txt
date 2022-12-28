@@ -35,10 +35,6 @@ C:\Users\Admin\source\repos\Providers\obj\Debug\pages\PersonsView.baml
 C:\Users\Admin\source\repos\Providers\obj\Debug\pages\AddDeal.g.cs
 C:\Users\Admin\source\repos\Providers\obj\Debug\pages\AddDeal.baml
 =======
-<<<<<<< HEAD
-C:\Users\Admin\source\repos\Providers\obj\Debug\pages\AddDeal.g.cs
-C:\Users\Admin\source\repos\Providers\obj\Debug\pages\AddDeal.baml
-=======
 E:\source\repos\trpo\EducationPractice_2022\bin\Debug\Providers.exe.config
 E:\source\repos\trpo\EducationPractice_2022\bin\Debug\Providers.exe
 E:\source\repos\trpo\EducationPractice_2022\bin\Debug\Providers.pdb

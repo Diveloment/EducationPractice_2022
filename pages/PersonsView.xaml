@@ -33,7 +33,6 @@
                 </Grid.ColumnDefinitions>
             </Grid>
             <ListView x:Name="listView" Grid.Row="2">
-<<<<<<< HEAD
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="ИД">
@@ -87,7 +86,6 @@
                         </GridViewColumn>
                     </GridView>
                 </ListView.View>
-=======
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -113,7 +111,6 @@
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
->>>>>>> Добавлены фильтры в просмотре сделок
             </ListView>
         </Grid>
     </Grid>
