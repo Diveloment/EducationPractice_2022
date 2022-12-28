@@ -63,3 +63,4 @@ E:\source\repos\trpo\EducationPractice_2022\obj\Debug\Providers.csproj.CoreCompi
 E:\source\repos\trpo\EducationPractice_2022\obj\Debug\Providers.csproj.CopyComplete
 E:\source\repos\trpo\EducationPractice_2022\obj\Debug\Providers.exe
 E:\source\repos\trpo\EducationPractice_2022\obj\Debug\Providers.pdb
+E:\source\repos\trpo\EducationPractice_2022\obj\Debug\App.baml
