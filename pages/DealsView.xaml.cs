@@ -94,5 +94,10 @@ namespace Providers.pages
             fltTypeStatus = (filterTypeSelect.SelectedItem as entities.DealTypes).DealType_id;
             UpdateList();
         }
+
+        private void dealAddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new pages.AddDeal());
+        }
     }
 }
