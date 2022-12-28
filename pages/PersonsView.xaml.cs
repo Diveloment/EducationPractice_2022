@@ -27,15 +27,15 @@ namespace Providers.pages
         public PersonsView()
         {
             InitializeComponent();
-            filterSelect.Items.Add("Все диапазоны");
             var statuses = App.Context.PersonStatuses.ToList();
             for (int i = 0; i < statuses.Count(); i++)
             {
                 filterSelect.Items.Add(statuses[i]);
             }
             filterSelect.SelectedIndex = 0;
+            filterSelect.DisplayMemberPath = "PersonStatus_name";
 
-            orderSelect.ItemsSource = new List<string>() { "По дате", "По дате обратно" };
+            orderSelect.ItemsSource = new List<string>() { "По имени (А-Я)", "По имени (Я-А)" };
             orderSelect.SelectedIndex = 0;
         }
 
@@ -46,7 +46,7 @@ namespace Providers.pages
 
         private void filter1Changed(object sender, SelectionChangedEventArgs e)
         {
-            fltStatus = filterSelect.SelectedIndex;
+            fltStatus = (filterSelect.SelectedItem as entities.PersonStatuses).PersonStatus_id;
             UpdateList();
         }
 
