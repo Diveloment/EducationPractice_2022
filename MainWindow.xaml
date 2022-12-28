@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Providers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1200" MinWidth="1200"
+        Title="Контроль поставок" Height="600" MinHeight="600" Width="1200" MinWidth="1200"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -34,14 +34,13 @@
                     <Image Width="35" Height="35" Margin="15, 5, 0, 5" Source="/imgs/free-icon-edit-9151638.png"></Image>
                     <Button x:Name="dealsViewBtn" Height="35" Width="100" Margin="5" Background="Transparent" BorderBrush="{x:Null}" Content="Сделки" Foreground="White" FontSize="14" Click="dealsViewBtn_Click"/>
                 </StackPanel>
-
             </StackPanel>
         </Grid>
         <Grid Background="{StaticResource ColorSidebar}">
-            <TextBlock Text="SRM" Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas"/>
+            <TextBlock Text="SRM" Foreground="White" Style="{StaticResource Header}"/>
         </Grid>
         <Grid Grid.Column="1" Background="{StaticResource ColorHeader}">
-            <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Consolas" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
+            <TextBlock Foreground="White" Style="{StaticResource Header}" Text="{Binding ElementName=mainFrame, Path=Content.Title}"></TextBlock>
         </Grid>
         <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden">
         </Frame>

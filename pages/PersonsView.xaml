@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Providers.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="1200"
-      Title="PersonsView">
+      Title="Персоны">
 
     <Grid Background="White">
         <Grid>
@@ -56,9 +56,9 @@
                                 <RowDefinition Height="55"></RowDefinition>
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Column="0" Text="{Binding Person_id}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <TextBlock Grid.Column="1" Text="{Binding Providers.Provider_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="1" Text="{Binding Providers.Provider_name}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Grid.Column="2" Text="{Binding Person_name}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                            <TextBlock Grid.Column="3" Text="{Binding Person_lastName}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow"></TextBlock>
+                            <TextBlock Grid.Column="3" Text="{Binding Person_lastName}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Grid.Column="4" Text="{Binding Person_phone}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                             <TextBlock Grid.Column="5" Text="{Binding Person_email}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                             <TextBlock Grid.Column="6" Text="{Binding PersonStatuses.PersonStatus_name}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>

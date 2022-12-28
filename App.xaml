@@ -6,5 +6,16 @@
     <Application.Resources>
         <SolidColorBrush x:Key="ColorSidebar" Color="#003459"/>
         <SolidColorBrush x:Key="ColorHeader" Color="#007EA7"/>
+
+        <Style TargetType="{x:Type FrameworkElement}" x:Key="BaseStyle">
+        </Style>
+
+        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}"
+               x:Key="Header">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Application.Resources>
 </Application>

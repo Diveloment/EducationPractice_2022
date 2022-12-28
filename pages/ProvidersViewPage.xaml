@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Providers.pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProvidersViewPage" Loaded="updateListView">
+      Title="Поставщики" Loaded="updateListView">
 
     <Grid Background="White">
         <Grid>
