@@ -17,5 +17,10 @@
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
+
+        <Style TargetType="ListView" BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                    Value="Auto"/>
+        </Style>
     </Application.Resources>
 </Application>
